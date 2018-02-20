@@ -164,6 +164,22 @@ class MarkdownViewer extends Component {
                             />
                         </div>
                     );
+                } else if (type === 'd-tube') {
+                    const url = `https://d.tube/#!/v/syndicateframes/${id}`;
+                    sections.push(
+                        <div className="videoWrapper">
+                            <iframe
+                                key={idx++}
+                                src={url}
+                                width={w}
+                                height={h}
+                                frameBorder="0"
+                                webkitallowfullscreen
+                                mozallowfullscreen
+                                allowFullScreen
+                            />
+                        </div>
+                    );
                 } else {
                     console.error('MarkdownViewer unknown embed type', type);
                 }
